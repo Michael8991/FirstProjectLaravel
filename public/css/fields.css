@@ -1,0 +1,127 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+}
+.wrap{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(232, 232, 232);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.btn:hover{
+    scale: 1.05;
+    background-color: rgb(29, 29, 29);
+}
+
+.btn-sec{
+    color: black;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid transparent;
+}
+
+.btn-sec:hover{
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.form-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.1);
+}
+.label-container{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mandatory-input{
+    width: fit-content;
+    text-align: center;
+    margin: 5px auto 0 auto ;
+    font-size: 10px;
+    color: red;
+    font-style: italic;
+}
+
+.input-readonly{
+    margin-left: 10px;
+}
+
+.dinamics-inputs-table{
+    border: 1px solid transparent;
+}
+
+.add-input-btn{
+    height: fit-content;
+    background-color: rgb(185, 249, 185);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.add-input-btn:hover{
+    background-color: rgb(154, 250, 154);
+    cursor: pointer;
+}
+
+.label-container{
+    display: flex;
+    align-items: center;
+}
+
+.customs-inputs-div p{
+    text-align: center;
+    font-style: italic;
+    color: grey;
+    font-size: 12px;
+}
+
+.customInputwrap{
+    margin: 20px 0;
+}
+
+.customInputwrap .label-container input, .customInputwrap .label-container select{
+    margin-left: 10px;
+}

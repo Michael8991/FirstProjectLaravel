@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    background-color: rgb(232, 232, 232);
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home{
+    width: 100%;
+}
+
+.home-header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+.home-header-wrapper{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.operation-wrap{
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.browser-wrap{
+    margin: auto;
+}
+
+.order-operation-wrap{
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.btn{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: rgb(202, 202, 255);
+    color: black;
+}
+.btn-primary:hover{
+    background-color: rgb(184, 184, 252);
+    cursor: pointer;
+}
+.btn-success{
+    background-color: rgb(204, 255, 202);
+    color: black;
+}
+.btn-success:hover{
+    background-color: rgb(187, 252, 185);
+    cursor: pointer;
+}
+.btn-danger{
+    background-color: rgb(255, 202, 202);
+    color: black;
+}
+.btn-danger:hover{
+    background-color: rgb(252, 173, 173);
+    cursor: pointer;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-a{
+    height: 75px;
+    background-color: rgb(211, 255, 211);
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+.row-a:hover{
+    background-color:rgb(159, 251, 159) ;
+}
+
+.btn-info{
+    text-decoration: none;
+    background-color: rgb(125, 164, 250);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 200;
+}
+
+table tbody tr th{
+    padding: 0 10px 0 10px;
+}
+
+
+.pagination {
+    display: flex;
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 20px 0; /* Espacio vertical */
+    justify-content: center; /* Centra la paginación */
+}
+
+.pagination li {
+    margin: 0 5px; /* Espaciado entre los elementos */
+}
+
+.pagination a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.pagination a:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.pagination .active span {
+    background-color: #0056b3; /* Color de fondo para el elemento activo */
+    color: white; /* Color del texto activo */
+    padding: 10px 15px; /* Mantiene el espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.pagination .disabled span {
+    background-color: #ccc; /* Color de fondo para enlaces deshabilitados */
+    color: #666; /* Color del texto para enlaces deshabilitados */
+    padding: 10px 15px; /* Mantiene el espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-container form {
+    display: flex;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; /* Espaciado entre el input y el select */
+}
+
+.search-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; /* Espaciado entre el select y el botón */
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}

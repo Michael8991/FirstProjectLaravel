@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <h3>Campos básicos:</h3>
+        <div class="label-container">
+            <label for="DNI">DNI</label>
+            <input type="text" name="DNI" id="dni" value="DNI" class="input-readonly" readonly>
+            <p class="mandatory-input">Este campo será obligatorio</p>
+        </div>
+        <div class="label-container">
+            <label for="Name">Nombre</label>
+            <input type="text" name="Name" id="name" value="Name" class="input-readonly" readonly>
+            <p class="mandatory-input">Este campo será obligatorio</p>
+        </div>
+        <div class="label-container"></div>
+            <label for="Surame">Apellidos</label>
+            <input type="text" name="Surname" id="surname" value="Apellidos" class="input-readonly" readonly>
+        </div>
+        <h3>Campos personalizados</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Dato</th>
+                    <th>Sí/No</th>
+                    <th>¿Es obligatorio?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Télefono</td>
+                    <td><input type="checkbox" name="PhoneNumber" id="phoneNumber"></td>
+                    <td><input type="checkbox" name="PhoneNumberMandatory" id="phoneNumberMandatory"></td>
+                </tr>
+                <tr>
+                    <td>Correo electrónico</td>
+                    <td><input type="checkbox" name="Email" id="email"></td>
+                    <td><input type="checkbox" name="EmailMandatory" id="emailMandatory"></td>
+                </tr>
+                <tr>
+                    <td>Redes sociales</td>
+                    <td><input type="checkbox" name="SocialNetwork" id="socialNetwork"></td>
+                    <td><input type="checkbox" name="SocialMediaMandatory" id="socialMediaMandatory"></td>
+                </tr>
+                <tr>
+                    <td>Campo personalizado</td>
+                    <td><input type="text" name="CustomInput" id="customInput"></td>
+                    <td><input type="checkbox" name="CustomInputMandatory" id="CustomInputMandatory"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="label-container">
+            <label for="CustomInput">Campor personalizado: </label>
+            <input type="text" name="CustomInput" id="customInput">
+            <label for="">¿Es obligatorio?</label>
+            <input type="checkbox" name="CustomInputMandatory" id="CustomInputMandatory">
+        </div>
+        <h3>Otros campos personalizados</h3>
+        <div class="label-container">
+            <label for="inputType">Tipo de Input:</label>
+            <select id="inputType" name="inputType" required>
+                <option value="text">Texto</option>
+                <option value="number">Número</option>
+                <option value="email">Correo Electrónico</option>
+                <option value="password">Contraseña</option>
+                <option value="date">Fecha</option>
+            </select>
+        </div>
+
+        <div class="label-container">
+            <label for="inputName">Nombre del Input:</label>
+            <input type="text" id="inputName" name="inputName" required>
+        </div>
+
+        <div class="label-container">
+            <label for="inputPlaceholder">Placeholder (Opcional):</label>
+            <input type="text" id="inputPlaceholder" name="inputPlaceholder">
+        </div>
+
+        <div class="label-container">
+            <label for="inputValue">Valor Predeterminado (Opcional):</label>
+            <input type="text" id="inputValue" name="inputValue">
+        </div>
+
+        <div class="label-container">
+            <label for="inputRequired">¿Es obligatorio?</label>
+            <input type="checkbox" id="inputRequired" name="inputRequired">
+        </div>
+
+        <button type="submit">Crear Input</button>
+    </form>
+
+    <button onclick="addCustomInput()">Agregar campo personalizado</button>
+
+    <div class="customs-inputs-div"></div>
+</body>
+</html>
