@@ -60,7 +60,7 @@ class ReservationController extends Controller
             'DNI' => $request->input('DNI'),
             'Name' => $request->input('Name'),
             'Surname' => $request->input('Surname'),
-            'signature' => true,
+            'signature' => false,
             'reservation_id' => $reservation->id //
         ]);
 
@@ -174,5 +174,22 @@ class ReservationController extends Controller
             'reservations' => $reservations,
             'pagination' => $reservations->links(),
         ]);
+    }
+    public function createRegister($id)
+    {
+        $reservation = Reservation::where('id', $id)->first();
+        if(!$reservation){
+            return redirect()->back()->with('error', 'La reserva no existe.');
+        }
+        $reservationData = CompletedForm::where('reservation_id', $id)->get();
+        if($reservationData->isEmpty()){
+            return view('reservations.show', [
+                'reservation'=>$reservation,
+                'reservationData' => null
+            ]);
+        }
+
+        return view('reservations.show', compact('reservation', 'reservationData'));
+
     }
 }

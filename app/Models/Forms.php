@@ -10,6 +10,11 @@ class Forms extends Model
     use HasFactory;
     protected $fillable = ['id','Name','LegalText','fields'];
 
+    protected $casts = [
+        'fields' => 'array',
+    ];
+
+
     public function experiences()
     {
         return $this->hasMany(Experience::class, 'form_id');

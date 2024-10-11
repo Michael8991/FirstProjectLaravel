@@ -20,7 +20,7 @@
     </header>
     <div class="home">
         <a class="btn" href="/registro"> < Volver</a>
-        <form action="http://rgpddaw.test/AgregarReserva" method="POST">
+        <form action="/AgregarReserva" method="POST">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <label for="Name">Nombre:</label>
             <input type="text" id="name" name="Name" required><br><br>

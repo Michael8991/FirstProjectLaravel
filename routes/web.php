@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard\ConfigController;
 use App\Http\Controllers\Dashboard\EditFormController;
 use App\Http\Controllers\Dashboard\FormDataController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\CompletedFormController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -14,9 +15,12 @@ Route::get('/',function(){
     return view('index');
 });
 
+
 Route::get('/configuracion',[ConfigController::class, 'index']);
 
 Route::get('/registro',[ReservationController::class, 'create']);
+Route::get('/reserva/{id}', [ReservationController::class, 'createRegister']);
+
 Route::get('/registroReservasHoy',[ReservationController::class, 'getReservationsToday']);
 Route::get('/registroReservasPasadas',[ReservationController::class, 'getPastReservations']);
 Route::get('/registroReservasFuturas',[ReservationController::class, 'getFutureReservations']);
@@ -44,6 +48,10 @@ Route::put('/form-data/{id}',[FormDataController::class, 'create']);
 
 Route::get('/NuevaReserva',[ReservationController::class,'getExperiences']);
 Route::post('/AgregarReserva',[ReservationController::class,'store']);
+
+//Registro en especifico
+Route::get('/popup-content/{id}',[CompletedFormController::class,'showUncompletedForm']);
+Route::get('/popup-content/edit',[CompletedFormController::class],'showForm');
 
 // Route::get('/experiences/{name}', function(){
 //     return view('experiences/show');

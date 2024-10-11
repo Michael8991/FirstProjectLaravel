@@ -48,7 +48,7 @@
             </div>
             <h3 style="margin:10px auto;">Todos los registros</h3>
             <?php foreach ($reservationsData as $reservation): ?>
-                <a class="row-a" href="">
+                <a class="row-a" href="/reserva/<?=$reservation['id']?>">
                     <table>
                         <tr>
                             <th><?php echo $reservation['reservation_time']; ?></th>

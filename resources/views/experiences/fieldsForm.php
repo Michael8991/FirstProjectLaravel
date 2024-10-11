@@ -11,7 +11,9 @@
         <title>Campos <?php echo $experienceData->ExperienceName?> </title>
         <meta charset="UTF-8">
         <meta name="csrf-token" content="<?php echo csrf_token() ?>">
-        <meta name="form_id" content="<?php echo $formData->id ?>">
+        <?php if($form):?>
+            <meta name="form_id" content="<?php echo $formData->id ?>">
+        <?php endif;?>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/css/fields.css" rel="stylesheet">
     </head>
